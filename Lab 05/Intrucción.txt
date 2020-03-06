@@ -1,0 +1,6 @@
+IncomeStatus = IF (DimCustomer[YearlyIncome] < 25000, "Lower Income",
+IF (AND(DimCustomer[YearlyIncome] >= 25000, DimCustomer[YearlyIncome] < 60000),
+"Middle Income",
+IF (AND(DimCustomer[YearlyIncome] >= 60000, DimCustomer[YearlyIncome] < 100000),
+"Higher Income",
+IF (DimCustomer[YearlyIncome] >= 100000, "Very High Income", "Other"))))
